@@ -1,8 +1,15 @@
 
 import React from 'react';
-import { Line } from 'react-chartjs-2';
+
 import { Col, Row, Typography } from 'antd';
-import { Area, AreaChart, ResponsiveContainer } from 'recharts';
+import { Line, } from 'react-chartjs-2';
+import { Chart as ChartJS, LineElement,CategoryScale,LinearScale,PointElement}from "chart.js"
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+)
 
 const { Title } = Typography;
 
@@ -51,8 +58,8 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
           <Title level={5} className="current-price">Current {coinName} Price: $ {currentPrice}</Title>
         </Col>
       </Row>
-      <h1 className='heading'>Chart is coming soon...</h1>
-      {/* <Line data={data} options={options} /> */}
+    
+      <Line data={data} options={options} />
     </>
   );
 };

@@ -3,7 +3,7 @@ import { Routes,Route, Link}from "react-router-dom"
 import {Layout, Typography,Space} from "antd"
 import "./App.css"
 
-import {Navbar,Homepage,Exchanges,Cryptocurrencies,CryptoDetails,News}from "./components"
+import {Navbar,Homepage,Cryptocurrencies,CryptoDetails,News}from "./components"
 
 const App = () => {
   return (
@@ -18,9 +18,7 @@ const App = () => {
               <Route exact path='/' element={<Homepage/>}>
                 
               </Route>
-              <Route exact path='/exchanges' element={<Exchanges/>}>
-                
-              </Route>
+              
               <Route exact path='/cryptocurrencies' element={<Cryptocurrencies/>}>
                 
               </Route>
